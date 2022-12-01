@@ -6,7 +6,9 @@ In this pre-chapter, you will make sure you have everything installed for runnin
 
 ## Docker desktop
 
-Docker Desktop is a desktop app helping you to manage Docker resources with an UI. It is not necessary to use Docker, only Docker engine is needed to build and run containers and manage resources.
+Docker Desktop is a desktop app helping you to manage Docker resources with an UI.
+
+**Note**: It is not necessary to use Docker, only Docker engine is needed to build and run containers and manage resources.
 
 - Go to [get docker](https://docs.docker.com/get-docker/) and install Docker Desktop for your laptop
 
@@ -51,6 +53,10 @@ Server: Docker Desktop 4.13.1 (90346)
 ## Get to know Docker Desktop
 
 Docker Desktop come with a dashboard to list and manage containers, images and volumes.
+
+![](./assets/desktop-containers.png)
+
+![](./assets/desktop-images.png)
 
 Remember what Docker Desktop hides:
 - Docker engine. Responsible to run containers, download images, mount volumes ... It's the core of Docker.
