@@ -80,7 +80,12 @@ As images are build in layers, building a new version will use previous version 
 
 ### Registry
 
-Storing image
+Images are stored in registries. The best known is Dockerhub. AWS service is named Elastic Container Registry.
+
+Registries good practices rules:
+- Immutable tags. You should not be able to push a tag already existing.
+- Encrypted at rest
+- Continuouas security static scanning, for all currently used version as CVEs are discovered every day.
 
 # Labs
 

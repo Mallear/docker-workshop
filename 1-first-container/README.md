@@ -2,13 +2,12 @@
 
 ## Overview
 
-In this part, you will start your first container and explore Docker CLI possibilities.
+In this part, you will start your first container and explore Docker CLI commands.
 
 ## Pre requisite
 
 - Docker Desktop started
 - Or at least Docker engine running
-
 
 # Step 1: Run your first container
 
@@ -96,20 +95,20 @@ In this step we will run a Nginx web server, access it and update it.
   For this step, we will use the [Nginx official image](https://hub.docker.com/_/nginx).
 
 2. Run an Nginx server
-   ```
-   $ docker run --detach --publish 8080:80 --name nginx nginx:latest
-      Unable to find image 'nginx:latest' locally
-      latest: Pulling from library/nginx
-      f3ac85625e76: Pull complete
-      2f2ae0d10f0c: Pull complete
-      686758060351: Pull complete
-      9d6463e85319: Pull complete
-      bb6dfee87e07: Pull complete
-      594d75b0add1: Pull complete
-      Digest: sha256:e209ac2f37c70c1e0e9873a5f7231e91dcd83fdf1178d8ed36c2ec09974210ba
-      Status: Downloaded newer image for nginx:latest
-5e1bf0e6b926bd73a66f98b3cbe23d04189c16a43d55dd46b8486359f6fdf048
-   ```
+  ```
+  $ docker run --detach --publish 8080:80 --name nginx nginx:latest
+  Unable to find image 'nginx:latest' locally
+  latest: Pulling from library/nginx
+  f3ac85625e76: Pull complete
+  2f2ae0d10f0c: Pull complete
+  686758060351: Pull complete
+  9d6463e85319: Pull complete
+  bb6dfee87e07: Pull complete
+  594d75b0add1: Pull complete
+  Digest: sha256:e209ac2f37c70c1e0e9873a5f7231e91dcd83fdf1178d8ed36c2ec09974210ba
+  Status: Downloaded newer image for nginx:latest
+  5e1bf0e6b926bd73a66f98b3cbe23d04189c16a43d55dd46b8486359f6fdf048
+  ```
 
    We are using a couple of new flags here. The --detach flag will run this container in the background.  The `publish` flag publishes port 80 in the container (the default port for nginx), via port 8080 on our host. The `--publish` flag is a feature that allows us to expose networking through the container onto the host.
 
@@ -124,11 +123,13 @@ In this step we will run a Nginx web server, access it and update it.
   ![nginx start page](./assets/nginx-start-page.png)
 
 3. Now that we have a web server running, we want to change the default page. In a new terminal, run a `bash` shell inside the container, the same way we did earlier:
+
 ```
 $ docker exec -it nginx bash
 ```
 
 You can find the index page at `/usr/share/nginx/html/index.html`. Let's update it:
+
 ```
 echo "Hello World" > /usr/share/nginx/html/index.html
 ```
@@ -154,6 +155,6 @@ Volumes are a way to share data with your containers or between your containers.
 4. Clean up
 
 ```
-$ docker stop nginx && docker rm nginx
+$ docker stop nginx && docker rm 
 ```
 

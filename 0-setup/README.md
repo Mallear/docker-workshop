@@ -2,13 +2,13 @@
 
 ## Overview
 
-In this pre-chapter, you will make sure you have everything installed for running Docker locally.
+In this chapter you will make sure you have everything installed for running Docker locally.
 
 ## Docker desktop
 
 Docker Desktop is a desktop app helping you to manage Docker resources with an UI.
 
-**Note**: It is not necessary to use Docker, only Docker engine is needed to build and run containers and manage resources.
+**Note**: Docker Desktop is not necessary to use Docker, only Docker engine is needed.
 
 - Go to [get docker](https://docs.docker.com/get-docker/) and install Docker Desktop for your laptop
 
