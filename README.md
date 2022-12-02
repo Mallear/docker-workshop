@@ -64,7 +64,7 @@ Declare and set default value for your environment variables.
 ENV VARIABLE=default
 ```
 
-And then define a command to run when starting.
+And then define a command to run when starting. Note that only one process runs inside the Docker container.
 
 ```Dockerfile
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
@@ -94,3 +94,10 @@ Registries good practices rules:
 - [2 - Creating your own image](2-create-your-own-image/README.md)
 
 
+# Documentation
+
+- [Docker official documentation](https://docs.docker.com/)
+- [Docker desktop documentation](https://docs.docker.com/desktop/)
+- [Docker CLI documentation](https://docs.docker.com/engine/reference/commandline/cli/)
+- [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/)
+- [Docker CLID documentation](https://docs.docker.com/engine/reference/builder/)

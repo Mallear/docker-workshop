@@ -88,11 +88,10 @@ In this step we will run a Nginx web server, access it and update it.
 
 1. Explore the Docker Hub
 
-  The [Docker Hub](https://hub.docker.com/search?q=&type=image) is the public central registry for Docker images, which contains community and official images.
+The [Docker Hub](https://hub.docker.com/search?q=&type=image) is the public central registry for Docker images, which contains community and official images.\
+When searching for images you will find filters for "Docker Official Image", "Verified Publisher" and "Sponsored OSS" images. Select the "Docker Official Image" filter, to find images that are deemed enterprise-ready and are tested with Docker Enterprise Edition product. It is important to avoid using unverified content from the Docker Store when developing your own images that are intended to be deployed into the production environment. These unverified images may contain security vulnerabilities or possibly even malicious software.
 
-  When searching for images you will find filters for "Docker Official Image", "Verified Publisher" and "Sponsored OSS" images. Select the "Docker Official Image" filter, to find images that are deemed enterprise-ready and are tested with Docker Enterprise Edition product. It is important to avoid using unverified content from the Docker Store when developing your own images that are intended to be deployed into the production environment. These unverified images may contain security vulnerabilities or possibly even malicious software.
-
-  For this step, we will use the [Nginx official image](https://hub.docker.com/_/nginx).
+For this step, we will use the [Nginx official image](https://hub.docker.com/_/nginx).
 
 2. Run an Nginx server
   ```
@@ -110,7 +109,7 @@ In this step we will run a Nginx web server, access it and update it.
   5e1bf0e6b926bd73a66f98b3cbe23d04189c16a43d55dd46b8486359f6fdf048
   ```
 
-   We are using a couple of new flags here. The --detach flag will run this container in the background.  The `publish` flag publishes port 80 in the container (the default port for nginx), via port 8080 on our host. The `--publish` flag is a feature that allows us to expose networking through the container onto the host.
+  We are using a couple of new flags here. The --detach flag will run this container in the background.  The `publish` flag publishes port 80 in the container (the default port for nginx), via port 8080 on our host. The `--publish` flag is a feature that allows us to expose networking through the container onto the host.
 
   How do you know port 80 is the default port for nginx? Because it is listed in the [documentation](https://hub.docker.com/_/nginx) on the Docker Hub. In general, the documentation for the verified images is very good, and you will want to refer to them when running containers using those images.
 
