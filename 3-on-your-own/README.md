@@ -67,7 +67,7 @@ Let's use what we learned on the first labs to containerize the API and client m
 3. Write simple `Dockerfiles` to containerize these apps.
 - Base your Dockerfiles on the `amazoncorretto:17` image
 - You will want the API and client to listen to the port 80 inside the container.
-- Make sure your image can be built and run locally (even with errors from the program)
+- Build your image with a tag
 4. Add a service to the `docker-compose.yml` file a the repository root for the API and for the client.
 - Configure the API to accept traffic from your laptop on port 9090
 - Configure the client to accept traffic from your laptop on port 8080
@@ -88,3 +88,5 @@ curl -X POST localhost:8080/client/users -d '{"name": "JohnDoe", "email": "doe@a
     networks:
       - demo
 ```
+
+Once you've done, you can find working solutions in the [solutions](./solutions/) directory.

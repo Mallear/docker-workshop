@@ -1,0 +1,12 @@
+# To build with
+# docker build --build-arg VERSION=0.1 -t client:local .
+FROM amazoncorretto:17
+
+ARG VERSION
+
+RUN mkdir -p /opt/client
+WORKDIR /opt/client
+COPY ./build/libs/client-${VERSION}-all.jar ./client.jar
+
+CMD ["java", "-Dmicronaut.server.port=80", "-jar", "client.jar"]
+EXPOSE 80

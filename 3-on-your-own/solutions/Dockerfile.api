@@ -1,0 +1,12 @@
+# To build with
+# docker build --build-arg VERSION=0.1 -t api:local .
+FROM amazoncorretto:17
+
+ARG VERSION
+
+RUN mkdir -p /opt/api
+WORKDIR /opt/api
+COPY ./build/libs/api-${VERSION}-all.jar ./api.jar
+
+CMD ["java", "-Dmicronaut.server.port=80", "-jar", "api.jar"]
+EXPOSE 80
