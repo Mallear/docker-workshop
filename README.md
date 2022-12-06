@@ -92,7 +92,7 @@ Registries good practices rules:
 - [0 - Setup](0-setup/README.md)
 - [1 - Running your first container](1-first-container/README.md)
 - [2 - Creating your own image](2-create-your-own-image/README.md)
-
+- [3 - Hands on - micronaut apps](3-on-your-own/README.md)
 
 # Documentation
 

@@ -109,7 +109,7 @@ For this step, we will use the [Nginx official image](https://hub.docker.com/_/n
   5e1bf0e6b926bd73a66f98b3cbe23d04189c16a43d55dd46b8486359f6fdf048
   ```
 
-  We are using a couple of new flags here. The --detach flag will run this container in the background.  The `publish` flag publishes port 80 in the container (the default port for nginx), via port 8080 on our host. The `--publish` flag is a feature that allows us to expose networking through the container onto the host.
+  We are using a couple of new flags here. The --detach flag will run this container in the background. To debug a detached container, you can access its logs using `docker logs [-f] <container name or id>`. The `publish` flag publishes port 80 in the container (the default port for nginx), via port 8080 on our host. The `--publish` flag is a feature that allows us to expose networking through the container onto the host.
 
   How do you know port 80 is the default port for nginx? Because it is listed in the [documentation](https://hub.docker.com/_/nginx) on the Docker Hub. In general, the documentation for the verified images is very good, and you will want to refer to them when running containers using those images.
 
